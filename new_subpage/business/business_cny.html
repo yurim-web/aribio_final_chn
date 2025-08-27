@@ -1,0 +1,432 @@
+<!--@layout(/layout/basic/layout_cny.html)-->
+<script>
+  const currentPage = 'business';
+
+  const langLinks = {
+  business: {
+          kor: 'https://herzion.com/new_subpage/business/business.html',
+    eng: 'https://en.herzion.com/new_subpage/business/business_eng.html',
+    jpn: 'https://jp.herzion.com/new_subpage/business/business_jpn.html',
+    cny: 'https://cn.herzion.com/new_subpage/business/business_cny.html'
+  },
+  };
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const mobileLangDiv = document.getElementById('mobile_lang_links');
+    const desktopLangUl = document.getElementById('desktop_lang_links');
+    const links = langLinks[currentPage];
+
+    if (mobileLangDiv && links) {
+      mobileLangDiv.innerHTML = `
+        <a href="${links.kor}"><button >KOR</button></a>
+        <a href="${links.eng}"><button>ENG</button></a>
+        <a href="${links.jpn}"><button>JPN</button></a>
+        <a href="${links.cny}"><button class="active">CHN</button></a>
+      `;
+    }
+
+    if (desktopLangUl && links) {
+      desktopLangUl.innerHTML = `
+        <a href="${links.kor}"><li data-value="kor">KOR</li></a>
+        <a href="${links.eng}"><li data-value="eng">ENG</li></a>
+        <a href="${links.jpn}"><li data-value="jpn">JPN</li></a>
+        <a href="${links.cny}"><li data-value="cny"  class="active">CHN</li></a>
+      `;
+    }
+  });
+</script>
+
+  <link rel="stylesheet" href="business_cny.css?=202507131_5" />
+    <!-- 반응형 스타일 -->
+    <link rel="stylesheet" href="mo_business_cny.css?=20250721_4" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/pretendard@1.3.8/dist/web/static/pretendard.css"
+      rel="stylesheet"
+    />
+<!-- 중국어 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
+    <!-- 중국어 폰트 끝 -->
+
+    <!-- layout js -->
+    <script src="../layout_new/layout.js" defer></script>
+    <script src="business.js" defer></script>
+
+     <main>
+      <!-- 메인 베너 부분 -->
+      <section class="banner_section">
+        <div class="hero">
+          <div class="hero_content">
+            <h1>Business</h1>
+          </div>
+        </div>
+      </section>
+      <!-- Vibroacoustic Technology Innovation 섹션 -->
+      <section class="vibroacoustic_section">
+        <article class="container">
+            <h2 class="section_title">Vibroacoustic Technology Innovation</h2>
+            <p class="section_sub_title pc_text">通过振动与声波相结合的创新技术激活脑功能，以无创且安全的方式轻松管理脑健康。</p>
+            <p class="section_sub_title mo_text  tab_text">通过振动与声波相结合的创新技术激活脑功能，以无创且安全的方式轻松管理脑健康。</p>
+            <p class="section_sub_title mo_text momo_text">通过振动与声波相结合的创新技术激活脑功能，以无创且安全的方式轻松管理脑健康。</p>
+            <div class="section1_img_group">
+              <!-- pc 버전,테블릿버전 이미지 -->
+              <img class="pc_img tab_img" src="images/section1_img_1.png"></img>
+              <img class="pc_img tab_img" src="images/section1_img_2.png"></img>
+              <!-- 모바일버전 이미지 -->
+              <img class="mo_img tab_none_img" src="images/mo/mo_section1_img_1.png"></img>
+              <img class="mo_img tab_none_img" src="images/mo/mo_section1_img_2.png"></img>
+            </div>
+            <div class="section1_content_container">
+              <div class="section1_content_box">
+                <h3>神经健康优化</h3>
+                <p>基于脑科学的神经功能提升护理</p>
+              </div>
+              <div class="section1_content_box">
+                <h3>科学验证体系</h3>
+                <p>以实验和数据证明的技术可靠性</p>
+              </div>
+              <div class="section1_content_box">
+                <h3>定制振动与声波刺激</h3>
+                <p>调节感官深度的细腻刺激设计</p>
+              </div>
+              <div class="section1_content_box">
+                <h3>前沿技术融合</h3>
+                <p>科学、健康与设计的精密结合</p>
+              </div>
+            </div>
+        </article>
+      </section>
+
+      <!-- Cognitive Health Solutions 섹션 -->
+      <section class="cognitive_health_section">
+        <article class="container">
+          <div class="section2_title_box">
+            <h2 class="section_title">Cognitive Health Solutions</h2>
+            <p class="pc_text">基于最新脑科学研究设计的解决方案，有效支持认知功能增强和脑健康维护。以舒适无负担的方式实现日常脑部护理。</p>
+              <p class="mo_text tab_text">基于最新脑科学研究设计的解决方案，有效支持认知功能增强和脑健康维护。以舒适无负担的方式实现日常脑部护理。</p>
+            <p class="mo_text momo_text">基于最新脑科学研究设计的解决方案，有效支持认知功能增强和脑健康维护。以舒适无负担的方式实现日常脑部护理。</p>
+          </div>
+          <div class="section_content_3box_continer">
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section2_content_img_1"></div>
+              <h3>可穿戴设备</h3>
+              <p class="pc_text">以日常生活中轻松佩戴的可穿戴形式，实现持续便捷的认知功能管理。</p>
+              <p class="mo_text">以日常生活中轻松佩戴的可穿戴形式，实现持续便捷的认知功能管理。</p>
+            </div>  
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section2_content_img_2"></div>
+              <h3>无创技术</h3>
+              <p class="pc_text">
+                无需药物或手术，提供自然且安全激活脑功能的无创解决方案。
+              </p>
+              <p class="mo_text">无需药物或手术，提供自然且安全激活脑功能的无创解决方案。</p>
+            </div>
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section2_content_img_3"></div>
+              <h3>定制化程序</h3>
+              <p class="pc_text">根据个人认知状态和需求，提供优化的刺激模式，提高感受效果。
+              </p>
+              <p class="mo_text">根据个人认知状态和需求，提供优化的刺激模式，提高感受效果。</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Lifestyle Wellness 섹션 -->
+      <section class="lifestyle_wellness_section">
+        <article class="container section3_container">
+          <div class="section3_container_left">
+            <h2 class="section_title">Lifestyle Wellness</h2>
+            <p class="section_sub_title pc_text">
+              Herzion 被开发为可将日常脑健康管理技术应用于多个领域。采用基于可穿戴的无创刺激技术，可广泛应用于医疗、健康、专注等多个场景。
+            </p>
+            <p class="section_sub_title tab_text">
+              Herzion 被开发为可将日常脑健康管理技术应用于多个领域。采用基于可穿戴的无创刺激技术，可广泛应用于医疗、健康、专注等多个场景。
+            </p>
+            <p class="section_sub_title mo_text momo_text">
+              Herzion 被开发为可将日常脑健康管理技术应用于多个领域。采用基于可穿戴的无创刺激技术，可广泛应用于医疗、健康、专注等多个场景。
+            </p>
+          </div>
+          <!-- pc 전용 -->
+           <div class="pc_text">
+            <div class="section3_container_right ">
+              <div class="content_left_box">
+                <div class="section3_img_box">
+                  <h1>01</h1>
+                  <h2>日常健康护理</h2>
+                  <p>面向老年人和中老年群体的认知管理服务与健康产品化</p>
+                  <img src="images/section3_icon_1.svg" alt=""></img>
+                </div>
+                <div class="section3_img_box">
+                  <h1>03</h1>
+                  <h2>睡眠节律管理</h2>
+                  <p>用于改善睡眠质量的低频刺激技术，可与睡眠家电及健康服务联动</p>
+                  <img src="images/section3_icon_3.svg" alt=""></img>
+                </div>
+              </div>
+              <div class="content_right_box">
+                <div class="section3_img_box">
+                  <h1>02</h1>
+                  <h2>情绪与压力管理</h2>
+                  <p>可联动情绪调节与休息型心理护理方案、冥想内容</p>
+                  <img src="images/section3_icon_2.svg" alt=""></img>
+                </div>
+                <div class="section3_img_box">
+                  <h1>04</h1>
+                  <h2>基于专注力的工作支持</h2>
+                  <p>面向居家办公、教育、创意类岗位的脑激活解决方案，拓展 B2B 服务</p>
+                  <img style="width: 72px;" src="images/section3_icon_4.svg" alt=""></img>
+                </div>
+              </div>
+            </div>
+           </div>
+
+
+          <!-- 모바일전용 -->
+          <div class="mo_text">
+            <div class="section3_container_right">
+              <div class="section3_img_box">
+                <h1>01</h1>
+                <h2>日常健康护理</h2>
+                <p>面向老年人和中老年群体的认知管理服务与健康产品化</p>
+                <img src="images/section3_icon_1.svg" alt=""></img>
+              </div>
+              <div class="section3_img_box">
+                <h1>02</h1>
+                <h2>情绪与压力管理</h2>
+                <p>可联动情绪调节与休息型心理护理方案、冥想内容</p>
+                <img src="images/section3_icon_2.svg" alt=""></img>
+              </div>
+              <div class="section3_img_box">
+                <h1>03</h1>
+                <h2>睡眠节律管理</h2>
+                <p>用于改善睡眠质量的低频刺激技术，可与睡眠家电及健康服务联动</p>
+                <img src="images/section3_icon_3.svg" alt=""></img>
+              </div>
+              <div class="section3_img_box">
+                <h1>04</h1>
+                <h2>基于专注力的工作支持</h2>
+                <p>面向居家办公、教育、创意类岗位的脑激活解决方案，拓展 B2B 服务</p> 
+                <img class="section3_icon_4" src="images/section3_icon_4.svg" alt=""></img>
+              </div>
+          </div>
+        </div>
+
+        </article>
+      </section>
+
+      <!-- Sports & Fitness Solutions 섹션 -->
+      <section class="sports_fitness_section">
+        <article class="container">
+          <div class="section2_title_box">
+            <h2 class="section_title">Sports & Fitness Solutions</h2>
+            <p class="pc_text">提升运动表现与恢复管理的神经健康技术 赫尔尊的低频声波振动技术可应用于运动前后的神经激活与恢复支持，可为体育、健身、康复等多个领域提供可扩展的解决方案。
+            </p>
+            <p class="pc_text tab_text">提升运动表现与恢复管理的神经健康技术 赫尔尊的低频声波振动技术可应用于运动前后的神经激活与恢复支持，可为体育、健身、康复等多个领域提供可扩展的解决方案。
+            </p>
+            <p class="mo_text momo_text">
+              提升运动表现与恢复管理的神经健康技术 赫尔尊的低频声波振动技术可应用于运动前后的神经激活与恢复支持，可为体育、健身、康复等多个领域提供可扩展的解决方案。
+            </p>
+          </div>
+          <div class="section_content_3box_continer">
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section4_content_img_1"></div>
+              <h3>运动准备阶段</h3>
+              <p class="pc_text">通过刺激神经系统，提高肌肉反应能力与专注度，引导进入运动前的最佳状态</p>
+              <p class="mo_text">通过刺激神经系统，提高肌肉反应能力与专注度，引导进入运动前的最佳状态</p>
+            </div>
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section4_content_img_2"></div>
+              <h3>支持运动中表现</h3>
+              <p>通过提升认知专注与反应速度，提高运动表现</p>
+            </div>
+
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section4_content_img_3"></div>
+              <h3>运动后恢复护理</h3>
+              <p>以刺激为基础的恢复管理有助于缓解疲劳、预防运动伤害</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Digital Health Platform 섹션 -->
+      <section class="digital_health_section">
+        <article class="container">
+          <div class="section2_title_box">
+            <h2 class="section_title">Digital Health Platform</h2>
+            <p class="pc_text">
+              面向个性化脑健康管理的数字健康技术平台 通过数据驱动的精准分析与实时监测，评估大脑状态并提供最适合的刺激解决方案。
+            </p>
+            <p class="pc_text tab_text">
+              面向个性化脑健康管理的数字健康技术平台 通过数据驱动的精准分析与实时监测，评估大脑状态并提供最适合的刺激解决方案。
+            </p>
+            <p class="mo_text momo_text">
+              面向个性化脑健康管理的数字健康技术平台 通过数据驱动的精准分析与实时监测，评估大脑状态并提供最适合的刺激解决方案。
+            </p>
+          </div>
+          <div class="health_content_container">
+            <div class="health_img_box health_img_1">
+              <div class="helath_img_text_box">
+                <h1>数据驱动的分析技术</h1>
+                <p class="pc_text">
+                  收集并分析脑电与生理数据，实现对认知状态的量化评估与趋势预测。
+                </p>
+                <p class="mo_text">收集并分析脑电与生理数据，实现对认知状态的量化评估与趋势预测。
+                </p>
+              </div> 
+            </div>
+            <div class="health_img_box health_img_2">
+              <div class="helath_img_text_box">
+                <h1>实时反应追踪模块</h1>
+              <p class="pc_text">
+                持续监测用户的生理反应变化，精准追踪刺激效果与变化趋势。
+              </p>
+              <p class="mo_text">
+                持续监测用户的生理反应变化，精准追踪刺激效果与变化趋势。
+              </p>
+              </div>
+            </div>
+            <div class="health_img_box health_img_3">
+              <div class="helath_img_text_box">
+                <h1>综合健康管理界面</h1>
+              <p class="pc_text">
+                不仅限于大脑，还可扩展整合睡眠、压力、情绪平衡等全面健康信息的管理平台。
+              </p>
+              <p class="mo_text">
+                不仅限于大脑，还可扩展整合睡眠、压力、情绪平衡等全面健康信息的管理平台。
+              </p>
+              </div>
+            </div>
+            <div class="health_img_box health_img_4">
+              <div class="helath_img_text_box">
+                <h1>个性化刺激推荐算法</h1>
+              <p class="pc_text">
+                基于 AI 分析结果，推荐适合用户状态的刺激内容与模式。
+              </p>
+              <p class="mo_text">
+                基于 AI 分析结果，推荐适合用户状态的刺激内容与模式。
+              </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- B2B Solutions 섹션 -->
+      <section class="b2b_solutions_section">
+        <article class="container">
+          <div class="section2_title_box">
+            <h2 class="section_title">B2B Solutions</h2>
+            <p class="pc_text">提供根据各机构目的与环境优化的定制神经健康解决方案。是可广泛应用于医疗、科研与企业福利等多个领域的专业平台。</p>
+              <p class="pc_text tab_text">提供根据各机构目的与环境优化的定制神经健康解决方案。是可广泛应用于医疗、科研与企业福利等多个领域的专业平台。</p>
+            <p class="mo_text momo_text">
+              提供根据各机构目的与环境优化的定制神经健康解决方案。是可广泛应用于医疗、科研与企业福利等多个领域的专业平台。
+            </p>
+          </div>
+          <div class="section_content_3box_continer">
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section6_content_img_1"></div>
+              <h3>医疗机构合作</h3>
+              <p class="pc_text">通过专为医院与诊所定制的神经健康方案，可用于认知功能管理、康复与治疗辅助等。</p>
+              <p class="mo_text">
+                通过专为医院与诊所定制的神经健康方案，可用于认知功能管理、康复与治疗辅助等。
+              </p>
+            </div>
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section6_content_img_2"></div>
+              <h3>研究机构支持</h3>
+              <p class="pc_text">提供用于脑科学与神经生物研究的精密刺激设备与数据驱动的分析工具。
+              </p>
+              <p class="mo_text">
+                提供用于脑科学与神经生物研究的精密刺激设备与数据驱动的分析工具。
+              </p>
+            </div>
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section6_content_img_3"></div>
+              <h3>企业健康关怀项目</h3>
+              <p class="pc_text">规划面向员工的压力管理与专注力维护的定制脑健康项目，提升组织生产力与工作专注度。
+              </p>
+              <p class="mo_text">
+                规划面向员工的压力管理与专注力维护的定制脑健康项目，提升组织生产力与工作专注度。
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Global Market Expansion Strategy 섹션 -->
+      <section class="global_market_expansion_section">
+        <article class="container">
+          <h2 class="section_title" style="color: #ffffff;">Global Market Expansion Strategy</h2>
+          <p class="global_subtitle">面向全球医疗与健康市场，推进本地化战略与基于认证的扩展路线图。</p>
+        </article>
+      </section>
+
+     <!-- Global Market Expansion Strategy 서브 섹션 -->
+      <section class="global_market_expansion_sub_section">
+        <article class="container global_container">
+          <div class="global_text_4box">
+            <h1>01</h1>
+            <h2>稳固国内市场</h2>
+            <p class="pc_text">
+              加强在国内医疗与健康市场中的品牌地位，通过多样化产品线巩固市场基础。
+            </p>
+            <p class="pc_text tab_text">
+              加强在国内医疗与健康市场中的品牌地位，通过多样化产品线巩固市场基础。
+            </p>
+            <p class="mo_text momo_text">
+              加强在国内医疗与健康市场中的品牌地位，通过多样化产品线巩固市场基础。
+            </p>
+          </div>
+          <div class="global_text_4box">
+            <h1>02</h1>
+            <h2>进军亚洲市场</h2>
+            <p class="pc_text">
+              以地理接近与高需求潜力的亚洲国家为中心，扩大本地化营销战略与合作伙伴关系。
+            </p>  
+            <p class="pc_text tab_text">
+              以地理接近与高需求潜力的亚洲国家为中心，扩大本地化营销战略与合作伙伴关系。
+            </p>
+            <p class="mo_text momo_text">
+              以地理接近与高需求潜力的亚洲国家为中心，扩大本地化营销战略与合作伙伴关系。
+            </p>
+          </div>
+          <div class="global_text_4box">
+            <h1>03</h1>
+            <h2>开拓北美与欧洲市场</h2>
+            <p class="pc_text">
+              以国际认证为基础进入发达市场，同步推进本地渠道建设与品牌信任度提升。
+            </p>
+            <p class="pc_text tab_text">
+              以国际认证为基础进入发达市场，同步推进本地渠道建设与品牌信任度提升。
+            </p>
+            <p class="mo_text momo_text">
+              以国际认证为基础进入发达市场，同步推进本地渠道建设与品牌信任度提升。
+            </p>
+          </div>
+          <div class="global_text_4box">
+            <h1>04</h1>
+            <h2>建立全球品牌</h2>
+            <p class="pc_text">
+              基于技术创新与临床效果，确立在全球脑健康解决方案市场的领先品牌地位。
+            </p>
+            <p class="pc_text tab_text">
+              基于技术创新与临床效果，确立在全球脑健康解决方案市场的领先品牌地位。
+            </p>
+            <p class="mo_text momo_text">
+              基于技术创新与临床效果，确立在全球脑健康解决方案市场的领先品牌地位。
+            </p>
+          </div>
+
+        </article>
+      </section>
+
+    
+    </main>
+

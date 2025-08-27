@@ -1,0 +1,528 @@
+<!--@layout(/layout/basic/layout_cny.html)-->
+<script>
+  const currentPage = 'technology'; // ✅ 페이지 키 변경
+
+  const langLinks = {
+  technology: {
+      kor: 'https://herzion.com/new_subpage/technology/technology.html',
+    eng: 'https://en.herzion.com/new_subpage/technology/technology_eng.html',
+    jpn: 'https://jp.herzion.com/new_subpage/technology/technology_jpn.html',
+    cny: 'https://cn.herzion.com/new_subpage/technology/technology_cny.html'
+  }
+  };
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const mobileLangDiv = document.getElementById('mobile_lang_links');
+    const desktopLangUl = document.getElementById('desktop_lang_links');
+    const links = langLinks[currentPage];
+
+    if (mobileLangDiv && links) {
+      mobileLangDiv.innerHTML = `
+        <a href="${links.kor}"><button>KOR</button></a>
+        <a href="${links.eng}"><button>ENG</button></a>
+        <a href="${links.jpn}"><button>JPN</button></a>
+        <a href="${links.cny}"><button  class="active">CHN</button></a>
+      `;
+    }
+
+    if (desktopLangUl && links) {
+      desktopLangUl.innerHTML = `
+        <a href="${links.kor}"><li data-value="kor" >KOR</li></a>
+        <a href="${links.eng}"><li data-value="eng">ENG</li></a>
+        <a href="${links.jpn}"><li data-value="jpn">JPN</li></a>
+        <a href="${links.cny}"><li data-value="cny" class="active">CHN</li></a>
+      `;
+    }
+  });
+</script>
+
+    <link rel="stylesheet" href="/technology/technology.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="../layout_new/layout.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="technology.js?=20250711" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/pretendard@1.3.8/dist/web/static/pretendard.css" rel="stylesheet" />
+    <!-- 중국어 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
+    <!-- 중국어 폰트 끝 -->
+    <link rel="stylesheet" href="technology_cny.css?=20250721_1">
+    <link rel="stylesheet" href="mo_technology_cny.css?=20250717">
+    
+    <style>
+        .mobile_break,
+        .tab_break,
+        .web_break {
+            display: none;
+        }
+
+        /* 모바일 */
+        @media all and (max-width: 767px) {
+            .mobile_break { display: inline; }
+        }
+
+        /* 태블릿 */
+        @media all and (min-width: 768px) and (max-width: 1024px) {
+            .tab_break { display: inline; }
+        }
+
+        /* PC(웹) */
+        @media all and (min-width: 1025px) {
+            .web_break { display: inline; }
+        }
+    </style>
+   <main>
+        <!-- 메인 베너 부분 -->
+        <section class="banner_section">
+            <div class="hero">
+                <div class="hero_content">
+                    <h1>Technology</h1>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Was Developed 섹션 -->
+        <section class="tech_intro_section">
+            <div class="container">
+                <h2 class="section_title">How It Was Developed</h2>
+                <h2 class="section_title_mo">How It Was Developed</h2>
+                <div class="tech_intro_content">
+                    <div class="tech_intro_text">
+                        赫尔尊基于自主核心技术，针对最新需求高度优化的低频声波振动设备。
+                        <span class="tech_intro_text_blue_web">赫尔尊基于低频振动刺激可能影响神经细胞分化及受损神经组织修复的科学假设，开发了无创脑刺激技术。</span>
+                        设计为可日常使用的低频声波振动设备，旨在帮助认知健康与情绪稳定管理。
+                    </div>
+                    <div class="tech_intro_text_mo">
+                        赫尔尊基于自主核心技术，针对最新需求高度优化的低频声波振动设备。
+                        <span class="tech_intro_text_blue_mo">赫尔尊基于低频振动刺激可能影响神经细胞分化及受损神经组织修复的科学假设，开发了无创脑刺激技术。</span>
+                       设计为可日常使用的低频声波振动设备，旨在帮助认知健康与情绪稳定管理。
+                    </div>
+                </div>
+                <div class="section1_img_container">
+                    <img class="section1_img" src="images/section1_cny_2.svg" alt="헤르지온 기술 소개 이미지">
+                </div>
+            </div>
+        </section>
+
+        <!-- 추가된 섹션(이미지 섹션) -->
+        <section class="section2_img_section">
+            <div class="container img_section_container">
+                <div class="top_img_box">
+                    <img src="images/section_2_top_cny.svg" alt="">
+                </div>
+                <div class="top_img_box_mo">
+                    <img src="images/mo/mo_section_2_top_cny.svg" alt="">
+                </div>
+                <div class="bottom_container">
+                    <div class="bottom_contents_box">
+                        <div class="botoom_content">
+                            <div class="section2_img_box left_1"></div>
+                            <p class="bottom_content_text">
+                                <span class="title_bold">基于低频的声波振动刺激<br></span>
+                                利用低频物理振动的脑刺激技术
+                            </p>
+                        </div>
+                        <div class="botoom_content">
+                            <div class="section2_img_box left_2"></div>
+                            <p class="bottom_content_text">
+                                <span class="title_bold">经颅方式的物理振动传递<br></span>
+                                振动能量穿透颅骨，直接传递至神经组织
+                            </p>
+                        </div>
+                        <div class="botoom_content" style="border-bottom: none;">
+                            <div class="section2_img_box left_3"></div>
+                            <p class="bottom_content_text">
+                                <span class="title_bold">无创方式<br></span>
+                                不切开皮肤或组织，无需植入，外部安全应用
+                            </p>
+                        </div>
+                    </div>
+                    <h1 class="bottom_content_text_middle">                
+                        <span class="title_bold">经颅声波振动刺激（tVAS）<br></span>
+                        Transcranial Vibroacoustic<br>
+                        Stimulation<br>
+                    </h1>
+                    <div class="bottom_contents_box">
+                        <div class="botoom_content">
+                            <div class="section2_img_box right_1"></div>
+                            <p class="bottom_content_text">
+                                <span class="title_bold">基于多感官的脑神经组织刺激<br></span>
+                                通过共振现象及听觉、触觉等感官整合机制激活大脑
+                            </p>
+                        </div>
+                        <div class="botoom_content">
+                            <div class="section2_img_box right_2"></div>
+                            <p class="bottom_content_text">
+                                <span class="title_bold">提升脑神经调节及感觉信息处理<br></span>
+                               特定频率的声波振动调节神经回路，促进感官间相互作用
+                            </p>
+                        </div>
+                        <div class="botoom_content" style="border-bottom: none;">
+                            <div class="section2_img_box right_3"></div>
+                            <p class="bottom_content_text">
+                                <span class="title_bold">可感知的微弱声波振动或共振刺激<br></span>
+                                用户可感知为柔和且稳定的感觉级别刺激
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section2_mid_img"></div>
+
+
+
+                <!-- 모바일 버전 -->
+                <div class="bottom_container_mo">
+                    <p class="mo_bottom_text">
+                        <span class="title_bold">经颅声波振动刺激（tVAS）<br></span>
+                        Transcranial Vibroacoustic<br>
+                        Stimulation<br>
+                    </p>
+                    <div class="bottom_content_mo">
+                        <div class="bottom_content_mo_box">
+                            <div class="section2_img_box_mo m_img_1"></div>
+                            <p class="bottom_content_text_mo">
+                                <span class="title_bold">基于低频的声波振动刺激<br></span>
+                                利用低频物理振动的脑刺激技术
+                            </p>
+                        </div>
+                        <div class="bottom_content_mo_box">
+                            <div class="section2_img_box_mo m_img_2"></div>
+                            <p class="bottom_content_text_mo">
+                                <span class="title_bold">经颅方式的物理振动传递<br></span>
+                                振动能量穿透颅骨，直接传递至神经组织
+                            </p>
+                        </div>
+                        <div class="bottom_content_mo_box">
+                            <div class="section2_img_box_mo m_img_3"></div>
+                            <p class="bottom_content_text_mo">
+                                <span class="title_bold">无创方式<br></span>
+                               不切开皮肤或组织，无需植入，外部安全应用
+                            </p>
+                        </div>
+                        <div class="bottom_content_mo_box">
+                            <div class="section2_img_box_mo m_img_4"></div>
+                            <p class="bottom_content_text_mo">
+                                <span class="title_bold">基于多感官的脑神经组织刺激<br></span>
+                                通过共振现象及听觉、触觉等感官整合机制激活大脑
+                            </p>
+                        </div>
+                        <div class="bottom_content_mo_box">
+                            <div class="section2_img_box_mo m_img_5"></div>
+                            <p class="bottom_content_text_mo">
+                                <span class="title_bold">提升脑神经调节及感觉信息处理<br></span>
+                                特定频率的声波振动调节神经回路，促进感官间相互作用
+                            </p>
+                        </div>
+                        <div class="bottom_content_mo_box" style="border-bottom: none;">
+                            <div class="section2_img_box_mo m_img_6"></div>
+                            <p class="bottom_content_text_mo">
+                                <span class="title_bold">可感知的微弱声波振动或共振刺激<br></span>
+                                用户可感知为柔和且稳定的感觉级别刺激
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 추가된 섹션 표 부분 -->
+        <section class="graph_section">
+            <div class="container">
+                <h1 class="section_title">tVAS vs Traditional Non-Invasive<br>
+                Brain Stimulation (NIBS) Techniques</h1>
+                <h2 class="section_title_mo" style="line-height: 1.3;">tVAS vs Traditional Non-Invasive 
+                Brain Stimulation (NIBS) Techniques</h2>
+                <img src="images/graph_cny.svg" class="graph_img" alt="">
+                <img src="images/mo/m_graph_cny.svg" class="graph_img_mo" alt="">
+            </div>
+        </section>
+
+        <!-- Core Technology 섹션 -->
+        <section class="tech_features_section">
+            <div class="container">
+                <h2 class="section_title">Core Technology</h2>
+                <h2 class="section_title_mo">Technology</h2>
+                <h3 class="section_subtitle_mo">Herzion</h3>
+                <div class="tech_features_grid ">
+                    <div class="tech_feature_image_card">
+                        <img class="tech_feature_image_card_img1" src="images/section3_1.png" alt="특별한 음향진동 이펙트 이미지">
+                    </div>
+                    <div class="tech_feature_content_card">
+                        <p class="tech_feature_subtitle">更安全的全脑振动</p>
+                        <h3 class="tech_feature_title web_text_three">
+                            独特的<span class="mobile_break">声波振动效果</span><span class="webtab_break">声波振动效果</span>
+                        </h3>
+                        <h3 class="tech_feature_title tab_text">独特的声波振动效果</h3>
+                        <h3 class="tech_feature_title mo_text">独特的声波振动效果</h3>
+                        <p class="tech_feature_text">
+                           赫尔尊不同于使用电、光、噪音等强刺激的传统方法，利用声波共振，
+                            <span class="tech_feature_text_blue">柔和传递广泛且深层的振动。</span>
+                            采用安全的低频声波振动技术，不对身体造成负担，
+即使佩戴期间，也能自由进行工作和日常活动。
+                        </p>
+                        <p class="tect_feature_text_mo tab_text">
+                            赫尔尊不同于使用电、光、噪音等强刺激的传统方法，利用声波共振，
+                            <span class="tech_feature_text_blue">柔和传递广泛且深层的振动。</span>
+                            采用安全的低频声波振动技术，不对身体造成负担，
+                            即使佩戴期间，也能自由进行工作和日常活动。
+                        </p>
+                        <p class="tect_feature_text_mo mo_text">
+                            赫尔尊不同于使用电、光、噪音等强刺激的传统方法，利用声波共振，
+                            <span class="tech_feature_text_blue">柔和传递广泛且深层的振动。</span>
+                            采用安全的低频声波振动技术，不对身体造成负担，
+                            即使佩戴期间，也能自由进行工作和日常活动。
+                        </p>
+                    </div>
+
+                    <div class="tech_feature_image_card">
+                        <img class="tech_feature_image_card_img2" src="images/section3_2.png" alt="초소형 음향 진동 모듈 이미지" style="object-fit:cover;">
+                    </div>
+                    <div class="tech_feature_content_card">
+                        <p class="tech_feature_subtitle">多通道脑部刺激 </p>
+                        <h3 class="tech_feature_title web_text_three">配备超小型声波振动模块</h3>
+                        <h3 class="tech_feature_title tab_text">配备超小型声波振动模块</h3>
+                        <h3 class="tech_feature_title mo_text">配备超小型声波振动模块</h3>
+                        <p class="tech_feature_text">
+                            赫尔尊采用超小型声波振动模块，
+                            <span class="tech_feature_text_blue">直接刺激额叶和颞叶部位。</span>
+                            通过精密的多通道刺激技术，促进脑功能激活。
+                        </p>
+                        <p class="tect_feature_text_mo tab_text">
+                            赫尔尊采用超小型声波振动模块，直接刺激额叶和颞叶部位，
+                            <span class="tech_feature_text_blue">精准的多通道刺激技术，促进大脑功能激活。</span>
+                        </p>
+                        <p class="tect_feature_text_mo mo_text">
+                            赫尔尊采用超小型声波振动模块，直接刺激额叶和颞叶部位，
+                            <span class="tech_feature_text_blue">精准的多通道刺激技术，促进大脑功能激活。</span>
+                        </p>
+                    </div>
+
+                    <div class="tech_feature_image_card">
+                        <img class="tech_feature_image_card_img3" src="images/section3_3_cny.svg" alt="저주파 음향진동 자극 이미지">
+                    </div>
+                    <div class="tech_feature_content_card">
+                        <h3 class="tech_feature_title web_text_three">
+                          低频声波振动刺<span>激的优化性能</span>
+                        </h3>
+                        <h3 class="tech_feature_title tab_text">低频声波振动刺激的优化性能</h3>
+                        <h3 class="tech_feature_title mo_text">低频声波振动刺激的优化性能</h3>
+                        <p class="tech_feature_text">
+                           赫尔尊设计用于实现20Hz至120Hz低频范围内精确且稳定的声波振动，
+                            <span class="tech_feature_text_blue">提供最适合脑刺激的刺激强度和频率响应特性。</span>
+                        </p>
+                        <p class="tect_feature_text_mo tab_text">
+                           赫尔尊设计用于实现20Hz至120Hz低频范围内精确且稳定的声波振动，<span class="tech_feature_text_blue">提供最适合脑刺激的刺激强度和频率响应特性。</span>
+                        </p>
+                        <p class="tect_feature_text_mo mo_text">
+                            赫尔尊设计用于实现20Hz至120Hz低频范围内精确且稳定的声波振动，<span class="tech_feature_text_blue">提供最适合脑刺激的刺激强度和频率响应特性。</span>
+                        </p>
+                    </div>
+
+                    <div class="tech_feature_image_card">
+                        <img class="tech_feature_image_card_img4" src="images/section3_4_cny.svg" alt="저주파 음향진동 자극 이미지">
+                    </div>
+                    <div class="tech_feature_content_card">
+                        <h3 class="tech_feature_title web_four">
+                            提供多样刺激感的振动模式优化技术
+                        </h3>
+                        <h3 class="tech_feature_title mobile_four tab_text">提供多样刺激感的振动模式优化技术</h3>
+                        <h3 class="tech_feature_title mobile_four mo_text">提供多样刺激感的振动模式优化技术</h3>
+                        <p class="tech_feature_text">
+                            <span class="tech_feature_text_blue">赫尔尊精确调节振动的强度、节奏和频率，实现用户各异的多样刺激感。</span>
+                            设计以适应个人状况和目的，实现定制化脑刺激。
+                        </p> 
+                        <p class="tect_feature_text_mo tab_text">
+                            <span class="tech_feature_text_blue">赫尔尊精确调节振动的强度、节奏和频率，实现用户各异的多样刺激感。</span>
+                            设计以适应个人状况和目的，实现定制化脑刺激。
+                        </p>
+                        <p class="tect_feature_text_mo mo_text">
+                            <span class="tech_feature_text_blue">赫尔尊精确调节振动的强度、节奏和频率，实现用户各异的多样刺激感。</span>
+                            设计以适应个人状况和目的，实现定制化脑刺激。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 중국어버전 논문섹션 - 웹버전 -->
+        <!-- Scientific Basis 섹션 -->
+        <section class="scientific_basis_section">
+            <div class="container">
+                <h2 class="section_title">Scientific Basis</h2>          
+                <div class="scientific_basis_scroll">
+                    <div class="swiper researchSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="https://pdf.sciencedirectassets.com/271056/1-s2.0-S0361923024X00131/1-s2.0-S0361923024002727/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHoaCXVzLWVhc3QtMSJHMEUCICtlWLOMR44dZMnPuILxEWfKgrt0qGYzvqGj8YmvqyxkAiEAmCP4zx24rA8fiLXSM60eeOVGAXntId4Ccz%2Flht%2FNHasqvAUIg%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwwNTkwMDM1NDY4NjUiDL3mnN0w7PErJD%2BRpyqQBdtyZ1Qnxj0uvtOLbDugFc4DsRpO5muYqOueX8G6a%2BvydzqGikvBRsOM0BE4W9M97aFQbFXHBhyO388wXeTLkkf69FLoKV0r6uluGsgwaOo2tbc4xzb9X13aHY8hgk9UwsRzQrUs5HZlPnUIV1%2FfYTBjsfSEV7%2B%2FYZHUmY18FjC3nmKE8BpRqJuizIVyssaPq4r66%2BpPnj9%2FggM%2By6u7ik52zeHVit%2F7vRWBNyM4uGiTbPR14psEuv6vlnIrVNW%2F50J4CnGmAwyqqNKgOZkSNgc0EO6V6B4RjImo9Pr9HWwVQq6p%2Fj3xcU0H6yOIRuRO1sy86MgIQ3CWp5lf0ycJSpCgzu4ovg64JtK3LWJjaE2SEm0fULiLH59kOzyOGRE33KHV1FH7d3J1Yw02jLXeekQeB4a3SoI%2B1I%2FcuF9miXa1WEhjiSuu0v0AOk6ro3WZJANR20bJ8jVwVvbdf2qvK%2FGUhGodlaVFFJa638X5dAb7gWX2CBLWIn7jZsQB0nl4M7ppeFAI%2BPnaLxDrO7lyJmebuFrueNVp8GutwB0uSryYxkPNF4k24DinVYhwkQkJ5U%2BNwi1nIpGL02Ztz28W1uDYsnUC14RY8i%2BOZhcixWmwOlScof5MOf%2FTzBuIuCPveoeX68AVVKh6YfrNApluIQLjEbAaj%2BA0OaN%2FWQtI9fr2ydr3gakl%2BwwptyK6J9d2SqhDoR%2Bakg5OKjKNJJfHdapajx57LSyFdey1eTJJldiQuBkgR7vcDEzUxzPQY7uyVwiszTWEHLu0lDX4m6d%2FG8Q1u%2BE6fIzlKn6jKZKPEUUaFAwa3Bw%2F%2FpMs7NxTO3pyl0bKM1FBqnWDJ9I3j6hYnyOlVKM8XpZd%2FA%2F1Q36tLBLSMN3sscMGOrEBLN7zT%2BreyFx4EStxkeEPf0r%2BMxEGXU09MPkjOfrwmfM%2BEIcvTpTBw4zou3qGCVbOgnfPABNyLconA0IgOQrzmrYwbbrf0DCNUZ4PmOWhcFlUbRJLWtrLCJNuOAwvOCujhOL68IP2QHzW1qey1SycAuQuOaosUOdnUMfKzvJUoNyZwuvC0dwzcrEI%2BpQFGuHK69%2BhboItxNT5P%2FhUq3f0PZwl8JGjExv8%2FjnWiMoASDb1&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250708T024305Z&X-Amz-SignedHeaders=host&X-Amz-Expires=299&X-Amz-Credential=ASIAQ3PHCVTYVZOHI4RI%2F20250708%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=8ee5e341587a2e9b6c63a76b57d90b783520336189345bf86c5d542eff340c3c&hash=b3d9609670102e4b9c1ff77e7cdc261afaaad4c52972a5c0475dd6f7f8f0c6ff&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S0361923024002727&tid=spdf-ae9643a4-6806-4299-9c25-0edd8acb9389&sid=eaa56985293bc744a669d9a91d29c29a7004gxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=11145d5306035406545807&rr=95bc3b68d9ae8b5e&cc=kr" target="_blank">
+                                    <div class="research_card">
+                                        <div class="research_card_image_rounded card_hover_effect">
+                                            <img src="images/thesis_1.jpg" alt="연구 이미지 1">
+                                            <button class="view_btn">View</button>
+                                        </div>
+                                        <div class="research_card_content">
+                                            <h3>Vibrotactile stimulation at 40 Hz inhibits Aβ-induced changes in SH-SY5Y, BV2 cells, and pericytes</h3>
+                                            <p class="research_date">2025. 01</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://www.frontiersin.org/journals/aging-neuroscience/articles/10.3389/fnagi.2025.1526088/abstract"target="_blank">
+                                    <div class="research_card">
+                                        <div class="research_card_image card_hover_effect">
+                                            <img src="images/thesis_2.jpg" alt="연구 이미지 2">
+                                            <button class="view_btn">View</button>
+                                        </div>
+                                        <div class="research_card_content">
+                                            <h3>Improvement of neuropsychological and cognitive functions in older adults through transcranial vibroacoustic stimulation: a double blind, randomized, comparative trial</h3>
+                                            <p class="research_date">2025. 07</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" taget="">
+                                    <div class="research_card">
+                                        <div class="research_card_image_rounded card_hover_effect">
+                                            <!--<img src="" alt="연구 이미지 3">
+                                            <button class="view_btn">View</button>-->
+                                        </div>
+                                        <div class="research_card_content">
+                                            <h3>Coming Soon</h3>
+                                            <!--<p class="research_date">2024. 05</p>-->
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" target="">
+                                    <div class="research_card">
+                                        <div class="research_card_image card_hover_effect">
+                                            <!--<img src="" alt="연구 이미지 4">
+                                            <button class="view_btn">View</button>-->
+                                        </div>
+                                        <div class="research_card_content">
+                                            <h3>Coming Soon</h3>
+                                            <!--<p class="research_date">2024. 05</p>-->
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a hef="#" target="">
+                                    <div class="research_card">
+                                        <div class="research_card_image card_hover_effect">
+                                            <!--<img src="" alt="연구 이미지 5">
+                                            <button class="view_btn">View</button>-->
+                                        </div>
+                                        <div class="research_card_content">
+                                            <h3>Coming Soon</h3>
+                                            <!--<p class="research_date">2024. 05</p>-->
+                                        </div>
+                                    </div>
+                                </div>
+                             </a>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="custom-progressbar">
+                            <div class="custom-progressbar-bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+        <!-- Scientific Basis 섹션 모바일버전 -->
+        <section class="thesis_mobile_section">
+            <div class="container">
+                <h2 class="section_title_mo">Thesis</h2>
+                <div class="swiper mobileThesisSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="thesis_mobile_card_container">
+                                <div class="thesis_mobile_card">
+                                    <div class="thesis_mobile_card_image">
+                                        <img src="images/thesis_1.jpg" alt="">
+                                    </div>
+                                    <div class="thesis_mobile_card_content">
+                                        <h3>Vibrotactile stimulation at 40 Hz inhibits Aβ-induced changes in SH-SY5Y, BV2 cells, and pericytes</h3>
+                                        <a href="https://pdf.sciencedirectassets.com/271056/1-s2.0-S0361923024X00131/1-s2.0-S0361923024002727/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHoaCXVzLWVhc3QtMSJHMEUCICtlWLOMR44dZMnPuILxEWfKgrt0qGYzvqGj8YmvqyxkAiEAmCP4zx24rA8fiLXSM60eeOVGAXntId4Ccz%2Flht%2FNHasqvAUIg%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwwNTkwMDM1NDY4NjUiDL3mnN0w7PErJD%2BRpyqQBdtyZ1Qnxj0uvtOLbDugFc4DsRpO5muYqOueX8G6a%2BvydzqGikvBRsOM0BE4W9M97aFQbFXHBhyO388wXeTLkkf69FLoKV0r6uluGsgwaOo2tbc4xzb9X13aHY8hgk9UwsRzQrUs5HZlPnUIV1%2FfYTBjsfSEV7%2B%2FYZHUmY18FjC3nmKE8BpRqJuizIVyssaPq4r66%2BpPnj9%2FggM%2By6u7ik52zeHVit%2F7vRWBNyM4uGiTbPR14psEuv6vlnIrVNW%2F50J4CnGmAwyqqNKgOZkSNgc0EO6V6B4RjImo9Pr9HWwVQq6p%2Fj3xcU0H6yOIRuRO1sy86MgIQ3CWp5lf0ycJSpCgzu4ovg64JtK3LWJjaE2SEm0fULiLH59kOzyOGRE33KHV1FH7d3J1Yw02jLXeekQeB4a3SoI%2B1I%2FcuF9miXa1WEhjiSuu0v0AOk6ro3WZJANR20bJ8jVwVvbdf2qvK%2FGUhGodlaVFFJa638X5dAb7gWX2CBLWIn7jZsQB0nl4M7ppeFAI%2BPnaLxDrO7lyJmebuFrueNVp8GutwB0uSryYxkPNF4k24DinVYhwkQkJ5U%2BNwi1nIpGL02Ztz28W1uDYsnUC14RY8i%2BOZhcixWmwOlScof5MOf%2FTzBuIuCPveoeX68AVVKh6YfrNApluIQLjEbAaj%2BA0OaN%2FWQtI9fr2ydr3gakl%2BwwptyK6J9d2SqhDoR%2Bakg5OKjKNJJfHdapajx57LSyFdey1eTJJldiQuBkgR7vcDEzUxzPQY7uyVwiszTWEHLu0lDX4m6d%2FG8Q1u%2BE6fIzlKn6jKZKPEUUaFAwa3Bw%2F%2FpMs7NxTO3pyl0bKM1FBqnWDJ9I3j6hYnyOlVKM8XpZd%2FA%2F1Q36tLBLSMN3sscMGOrEBLN7zT%2BreyFx4EStxkeEPf0r%2BMxEGXU09MPkjOfrwmfM%2BEIcvTpTBw4zou3qGCVbOgnfPABNyLconA0IgOQrzmrYwbbrf0DCNUZ4PmOWhcFlUbRJLWtrLCJNuOAwvOCujhOL68IP2QHzW1qey1SycAuQuOaosUOdnUMfKzvJUoNyZwuvC0dwzcrEI%2BpQFGuHK69%2BhboItxNT5P%2FhUq3f0PZwl8JGjExv8%2FjnWiMoASDb1&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250708T024305Z&X-Amz-SignedHeaders=host&X-Amz-Expires=299&X-Amz-Credential=ASIAQ3PHCVTYVZOHI4RI%2F20250708%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=8ee5e341587a2e9b6c63a76b57d90b783520336189345bf86c5d542eff340c3c&hash=b3d9609670102e4b9c1ff77e7cdc261afaaad4c52972a5c0475dd6f7f8f0c6ff&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S0361923024002727&tid=spdf-ae9643a4-6806-4299-9c25-0edd8acb9389&sid=eaa56985293bc744a669d9a91d29c29a7004gxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=11145d5306035406545807&rr=95bc3b68d9ae8b5e&cc=kr" target="_blank">
+                                            <div class="card_botteom">
+                                                <p class="thesis_mobile_date">2025. 01</p>
+                                                <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
+                                        	</div>
+                                        </a>
+                                    </div>
+                                </div>
+                                 <div class="thesis_mobile_card">
+                                    <div class="thesis_mobile_card_image">
+                                        <img src="images/thesis_2.jpg" alt="">
+                                    </div>
+                                    <div class="thesis_mobile_card_content">
+                                        <h3>Improvement of neuropsychological and cognitive functions in older adults through transcranial vibroacoustic stimulation: a double blind, randomized, comparative trial</h3>
+                                        <a href="https://www.frontiersin.org/journals/aging-neuroscience/articles/10.3389/fnagi.2025.1526088/abstract" target="_blank">
+                                            <div class="card_botteom">
+                                                <p class="thesis_mobile_date">2025. 07</p>
+                                                <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
+                                        	</div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="thesis_mobile_card">
+                                    <div class="thesis_mobile_card_image">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="thesis_mobile_card_content">
+                                        <h3>Coming Soon</h3>
+                                        <a href="#" target="">
+                                            <div class="card_botteom">
+                                                <!--<p class="thesis_mobile_date">2024. 03</p>-->
+                                                <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="thesis_mobile_card">
+                                    <div class="thesis_mobile_card_image">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="thesis_mobile_card_content">
+                                        <h3>Coming Soon</h3>
+                                        <a href="#" target="">
+                                            <div class="card_botteom">
+                                                <!--<p class="thesis_mobile_date">2024. 03</p>-->
+                                                <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thesis_mobile_card_container">
+                                <div class="thesis_mobile_card">
+                                    <div class="thesis_mobile_card_image">
+                                        <img src="#" alt="">
+                                    </div>
+                                    <div class="thesis_mobile_card_content">
+                                        <h3>Coming Soon</h3>
+                                        <a href="" target="">
+                                            <div class="card_botteom">
+                                                <!--<p class="thesis_mobile_date">2024. 03</p>-->
+                                                <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+    </main>

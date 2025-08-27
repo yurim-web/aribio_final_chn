@@ -1,0 +1,228 @@
+<!--@layout(/layout/basic/layout_cny.html)-->
+
+
+<script>
+  const currentPage = 'contact'; 
+
+  const langLinks = {
+  contact: {
+    kor: 'https://herzion.com/new_subpage/contact/contact.html',
+    eng: 'https://en.herzion.com/new_subpage/contact/contact_eng.html',
+    jpn: 'https://jp.herzion.com/new_subpage/contact/contact_jpn.html',
+    cny: 'https://cn.herzion.com/new_subpage/contact/contact_cny.html'
+  },
+
+  };
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const mobileLangDiv = document.getElementById('mobile_lang_links');
+    const desktopLangUl = document.getElementById('desktop_lang_links');
+    const links = langLinks[currentPage];
+
+    if (mobileLangDiv && links) {
+      mobileLangDiv.innerHTML = `
+        <a href="${links.kor}"><button >KOR</button></a>
+        <a href="${links.eng}"><button>ENG</button></a>
+        <a href="${links.jpn}"><button>JPN</button></a>
+        <a href="${links.cny}"><button class="active">CHN</button></a>
+      `;
+    }
+
+    if (desktopLangUl && links) {
+      desktopLangUl.innerHTML = `
+        <a href="${links.kor}"><li data-value="kor" >KOR</li></a>
+        <a href="${links.eng}"><li data-value="eng">ENG</li></a>
+        <a href="${links.jpn}"><li data-value="jpn">JPN</li></a>
+        <a href="${links.cny}"><li data-value="cny" class="active">CHN</li></a>
+      `;
+    }
+  });
+</script>
+
+
+ 
+    <link rel="stylesheet" href="../layout_new/header.css" />
+    <link rel="stylesheet" href="../layout_new/footer.css?=20250723" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="contact_cny.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/pretendard@1.3.8/dist/web/static/pretendard.css" rel="stylesheet" />
+    <!-- 중국어 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
+    <!-- 중국어 폰트 끝 -->
+    <link rel="stylesheet" href="contact_cny.css?=2025023"/>
+      <script src="../layout_new/layout.js" defer></script>
+
+    <script src="/new_subpage/contact/contact_input.js" defer></script>
+    <!-- 이메일 전송!!! -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+<form action="" id="contact-form">
+      <main>
+      <!-- 메인 베너 부분 -->
+      <section class="banner_section">
+        <div class="hero">
+          <div class="hero_content">
+            <h1>Contact</h1>
+        
+          </div>
+        </div>
+      </section>
+      <!-- Swiper 컨테이너 -->
+      <div class="swiper inquiry_swiper">
+        <div class="swiper-wrapper">
+          <!-- 첫 번째 슬라이드 -->
+          <div class="swiper-slide">
+            <section class="inquiry_section">
+              <div class="inquiry_box">
+                <div class="inquiry_contents">
+                  <div class="inquiry_left_container">
+                    <h1>您好。<br />请问您需要什么帮助？</h1>
+                    <p>＊可多项选择</p>
+                  </div>
+                  <div class="inquiry_right_container">
+                    <!-- 문의유형 선택 버튼 -->
+                    <button type="button" class="inquiry_btn" data-value="大宗采购咨询" id="inquiry_btn_1">
+                      大宗采购咨询
+                    </button>
+                    <button type="button" class="inquiry_btn" data-value="合作洽谈" id="inquiry_btn_2">
+                      合作洽谈
+                    </button>
+                    <button type="button" class="inquiry_btn" data-value="展会咨询" id="inquiry_btn_3">
+                      展会咨询
+                    </button>
+                    <button type="button" class="inquiry_btn" data-value="其他咨询" id="inquiry_btn_4">
+                      其他咨询
+                    </button>
+
+                    <!-- 숨겨진 필드: 실제로 EmailJS에 전송될 값 -->
+                    <input type="hidden" name="inquiry_type" id="inquiry_type" />
+                  </div>
+
+                </div>
+ 
+              <!-- 제출 버튼 -->
+              <button class="submit_btn" type="button" id="first_submit_btn">下一步 →</button>
+                <!-- 모바일 전용 버튼  -->
+                <button type="button" class="inquiry_btn inquiry_btn_mobile" id="inquiry_btn_mobile">
+                  下一步
+                </button>
+              </div>
+            </section>
+          </div>
+          <!-- 두 번째 슬라이드 -->
+          <div class="swiper-slide">
+            <section class="inquiry_section">
+              <div class="inquiry_box inquiry_box_desktop">
+                <div class="inquiry_contents">
+                  <div class="inquiry_left_container">
+                    <h1>请留下您<br/>的联系信息。</h1>
+                  </div>
+                  <div class="information_right_container">
+                    <!-- 회사 정보 부분 -->
+                       <div class="infomation_box">
+                    <!--   <h3>公司信息</h3>  -->
+                      <div class="information_btn_box">
+                        <button class="information_btn">
+                          公司名称<span class="red_color">*</span>
+                        </button>
+                        <button class="information_btn">
+                          邮箱<span class="red_color">*</span>
+                        </button>
+                        <input
+                          class="information_btn information_input"
+                          placeholder="请输入公司名称。"
+                          name="office_name" id="office_name"
+                        ></input><input id="user_email"
+                          class="information_btn information_input"
+                          placeholder="请输入邮箱。"
+                          name="user_email"
+                          
+                        ></input>
+                      </div>
+                    </div>
+                    
+ 
+                    <!-- 담당자 정보 부분 -->
+                
+                      <div class="infomation_box">
+                   <!--    <h3>联系人信息</h3>  -->
+                      <div class="information_btn_box">
+                        <button class="information_btn">
+                          姓名<span class="red_color">*</span>
+                        </button>
+                        <button class="information_btn">
+                          联系方式<span class="red_color">*</span>
+                        </button>
+                        <input id="user_name" class="information_btn information_input" placeholder="请输入姓名。" name="user_name" ></input>
+                        <input id="user_phone" class="information_btn information_input" placeholder="请输入联系方式。" name="user_phone" ></input>
+                      </div>
+                    </div>
+                
+                    <!-- 문의 정보 부분 -->
+                    
+                       <div class="infomation_box">
+                    <!--   <h3>联系人信息</h3>  -->
+                      <div class="information_btn_box last_btn_box">
+                        <button class="information_btn">咨询详情</button>
+                        <input class="information_btn information_input " name ="message" placeholder="请填写您的咨询内容。"></input>
+                      </div>
+                    </div>
+             
+                  </div>
+                </div>
+                
+              </div>
+              <!-- 모바일 버전  -->
+              <div class="inquiry_box mobile_section">
+                <div class="inquiry_contents">
+                  <div class="inquiry_left_container">
+                    <h1>请留下您的联系信息。</h1>
+                    <p style="color: #ff3a3a">＊ 所有字段必填</p>
+                  </div>
+                  <div class="inquiry_right_container">
+                    <input class="inquiry_btn input_mobile" placeholder="公司名称" name="office_name"/><input class="inquiry_btn input_mobile" style="color: #3c3c3c" placeholder="邮箱" name="user_email"/><input class="inquiry_btn input_mobile" style="color: #3c3c3c"placeholder="姓名" name="user_name"/><input class="inquiry_btn input_mobile" style="color: #3c3c3c" placeholder="联系方式" name="user_phone"/><textarea class="inquiry_btn input_mobile_long" placeholder="咨询详情" rows="4" name ="message"></textarea>
+                  </div>
+                </div>
+                <button
+                  class="inquiry_btn inquiry_btn_mobile"
+                  id="next_btn_mobile"
+                >
+                  下一步
+                </button>
+              </div>
+              <!-- 제출 버튼 -->
+              <button class="submit_btn submit_btn_location" type="button" id="second_submit_btn">提交 →</button>
+               <!-- 이전 버튼 -->
+              <button type="button" class="submit_btn submit_btn_location_back" id="second_back_btn">← 返回</button>
+            </section>
+          </div>
+          <!-- 세 번째 슬라이드 -->
+          <div class="swiper-slide">
+            <section class="inquiry_section">
+              <div class="inquiry_box">
+                <div class="inquiry_contents">
+                  <div class="inquiry_center_container">
+                    <h1>
+                     感谢您的咨询！<br />我们会尽快与您联系
+                    </h1>
+                    <button class="back_btn" type="button" id="back_btn">返回 →</button>
+                    <button class="back_btn_mobile" type="button" id="back_btn_mobile">
+                      返回
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  
+</form>
+
